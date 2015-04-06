@@ -12,32 +12,38 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label("your name") %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label("your email-address") %><br>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
+    <%= f.label("your location") %><br>
     <%= f.text_field :location %>
   </div>
   <div class="field">
-    <%= f.label :twitter_handle %><br>
+    <%= f.label("your twitter handle") %><br>
     <%= f.text_field :twitter_handle %>
   </div>
   <div class="field">
-    <%= f.label :female %><br>
-    <%= f.check_box :female %>
+    <%= f.label("Do you identify as female?") %><br>
+    <%= f.radio_button(:female, true)  %>
+    <%= f.label(:female, "Yes") %><br>
+    <%= f.radio_button(:female, false) %>
+    <%= f.label(:female, "No") %><br>
   </div>
   <div class="field">
-    <%= f.label :student_coach %><br>
+    <%= f.label("Would you like to join as student or coach?") %><br>
     <%= f.text_field :student_coach %>
   </div>
   <div class="field">
-    <%= f.label :beginner %><br>
-    <%= f.check_box :beginner %>
+    <%= f.label("Are you a beginner in programming Ruby?") %><br>
+    <%= f.radio_button(:beginner, true) %>
+    <%= f.label(:beginner, "Yes") %><br>
+    <%= f.radio_button(:beginner, false) %>
+    <%= f.label(:beginner, "No") %>
   </div>
   <div class="actions">
     <%= f.submit %>
