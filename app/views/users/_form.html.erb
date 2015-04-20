@@ -29,15 +29,12 @@
   </div>
   <div class="field">
     <p>Do you identify as female?</p>
-    <%= label_tag do %><br>
+    <p><%= label_tag do %>
       <%= f.radio_button(:female, true)  %> Yes
-    <% end %>
-    <%= f.radio_button(:female, false) %>
-    <%= f.label(:female, "No") %><br>
-  </div>
-  <div class="field">
-    <%= f.label(:student_coach, "Would you like to join as student or coach?") %><br>
-    <%= f.text_field :student_coach %>
+    <% end %></p>
+    <p><%= label_tag do %>
+      <%= f.radio_button(:female, false) %> No
+    <% end %></p>
   </div>
   <div class="field">
     <p>Are you a beginner in programming Ruby?</p>
