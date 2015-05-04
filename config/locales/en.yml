@@ -20,8 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  errors:
-    format: "Not a real message"
   hello: "Hello world"
   activerecord:
     errors:
@@ -37,4 +35,3 @@ en:
               invalid: "The given Twitter handle is invalid!"
             location:
               blank: "You must give us your location!"
-              
