@@ -28,7 +28,13 @@ en:
       models:
         user:
           attributes:
-            name: 
+            name:
               blank: "You must give us your name!"
             email:
-              blank: 
+              blank: "You must give us your E-mail!"
+              invalid: "The given E-mail address is invalid!"
+            twitter_handle:
+              invalid: "The given Twitter handle is invalid!"
+            location:
+              blank: "You must give us your location!"
+              
