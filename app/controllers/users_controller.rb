@@ -1,15 +1,14 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.all.order(already_notified: :asc)
   end
 
   # GET /users/1
   # GET /users/1.json
- 
+
 
   # GET /users/new
   def new
@@ -36,7 +35,7 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
-  
+
 
   # DELETE /users/1
   # DELETE /users/1.json
