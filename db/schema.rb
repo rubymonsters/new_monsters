@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420190912) do
+ActiveRecord::Schema.define(version: 20150518182600) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -20,8 +20,9 @@ ActiveRecord::Schema.define(version: 20150420190912) do
     t.string   "twitter_handle"
     t.boolean  "female"
     t.boolean  "beginner"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.boolean  "already_notified", default: false
   end
 
 end
