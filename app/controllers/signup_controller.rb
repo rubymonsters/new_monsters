@@ -2,7 +2,8 @@ class SignupController < ApplicationController
 
   # GET /signup
   def new
-    @user = User.new   # default: render :new (view) muss nicht extra definiert werden
+    # default: render :new (view) doesn't have to be defined.
+    @user = User.new
   end
 
   # POST /signup
@@ -15,20 +16,16 @@ class SignupController < ApplicationController
       render :new
     end
   end
-  
 
+  # GET /signup/confirmation
   def confirmation
     render :confirmation
-    #'Thanks for signing up!\nWe will notify you when we are about to set up
-    #  a new beginners group.'  --> put this in view template
   end
 
-  private    
+  private
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :location, :twitter_handle, :female, :beginner, :already_notified)
     end
 
 end
-
-# Next: build new view and cofirmation view, put them in signup views directory
