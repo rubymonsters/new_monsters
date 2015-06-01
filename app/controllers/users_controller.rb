@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  http_basic_authenticate_with name: "admin", password: PASSWORD 
+
   # GET /users
   # GET /users.json
   def index
@@ -8,14 +10,10 @@ class UsersController < ApplicationController
 
   # GET /users/1
   # GET /users/1.json
-
-
   # GET /users/new
   def new
     @user = User.new
   end
-
-
 
   # POST /users
   # POST /users.json
@@ -35,7 +33,6 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
-
 
   # DELETE /users/1
   # DELETE /users/1.json
