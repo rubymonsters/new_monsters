@@ -44,6 +44,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def send_notifications
+    params[:user_ids].each do |id|
+      user = User.find(id)
+      UserMailer.notification_email(user).deliver
+      user.update(already_notified: true)
+    end
+    redirect_to users_url, notice: 'Emails were sent :)'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

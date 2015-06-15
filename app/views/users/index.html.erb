@@ -2,9 +2,12 @@
 
 <h1>Future monsters</h1>
 
+<%= form_for(:users, url: send_notifications_path) do |f| %>
+
 <table>
   <thead>
     <tr>
+      <th>Send notification</th>
       <th>Name</th>
       <th>Email</th>
       <th>Location</th>
@@ -19,6 +22,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= check_box_tag("user_ids[]", user.id, false, id: "user_#{user.id}") %></td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= user.location %></td>
@@ -34,5 +38,9 @@
 </table>
 
 <br>
+
+<%= f.submit("Send email :)") %>
+
+<% end %>
 
 <%= link_to 'New User', new_user_path %>

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'signup' => 'signup#new', as: :signup
   post 'signup' => 'signup#create', as: :signup_create
   get 'signup/confirmation' => 'signup#confirmation', as: :signup_confirmation
+  post 'users/send_notifications' => 'users#send_notifications', as: :send_notifications
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
