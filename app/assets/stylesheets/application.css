@@ -13,3 +13,139 @@
  *= require_tree .
  *= require_self
  */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,600,400);
+
+::-moz-selection { color: white; background: #ee4444; text-shadow: none; }
+::selection      { color: white; background: #ee4444; text-shadow: none; }
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px)  { html { font-size: 0.875rem; } }
+@media screen and (max-width: 900px)  { html { font-size: 1rem;     } }
+@media screen and (min-width: 1200px) { html { font-size: 1.125rem; } }
+
+body {
+  position: relative;
+  background: #fff url(/images/background.jpg) repeat-x;
+  background-size: 60%;
+  background-attachment: fixed;
+  font-family: 'Open Sans', 'Helvetica Neue', helvetica, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  -webkit-font-smoothing: antialiased;
+}
+
+article {
+  max-width: 55rem;
+  margin: 5rem auto 0rem auto;
+  padding: 2rem 5rem;
+  background: #fff;
+}
+
+a {
+  color: #ee4444;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 2rem 0 1rem 0;
+}
+h1 {
+  font-size: 2.250rem;
+}
+h2 {
+  font-size: 1.50rem;
+}
+h3 {
+  font-size: 1.313rem;
+}
+h4 {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+footer {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer ul {
+  display: inline-block;
+  margin: 0;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #999;
+  text-decoration: none;
+}
+
+#index:before, body:before {
+  content: "";
+  position: relative;
+  display: block;
+  z-index: 2;
+  width: 250px;
+  height: 250px;
+  margin: 5rem auto 2rem auto;
+  background: url(/images/monstas.jpg);
+  background-size: 100%;
+  border: 1em solid #fff;
+
+  -webkit-box-shadow: 0px 2px 2px rgba(136, 153, 166, 0.5);
+     -moz-box-shadow: 0px 2px 2px rgba(136, 153, 166, 0.5);
+          box-shadow: 0px 2px 2px rgba(136, 153, 166, 0.5);
+  -moz-border-radius: 1.5rem;
+       border-radius: 1.5rem;
+}
+#index article, article {
+  margin-top: -9rem;
+  padding-top: 7rem;
+}
+#index h1, h1 {
+  font-size: 4rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.paper {
+  position: relative;
+}
+.paper:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 10%;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.5);
+     -moz-box-shadow: 0 0 20px rgba(0,0,0,0.5);
+          box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  -moz-border-radius: 100px / 8px;
+       border-radius: 100px / 8px;
+}

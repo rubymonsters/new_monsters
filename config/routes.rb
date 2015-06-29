@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :users
-  get 'signup' => 'signup#new', as: :signup
+  resources :users, only: [:index, :destroy]
+  root to: 'signup#new', as: :signup
   post 'signup' => 'signup#create', as: :signup_create
   get 'signup/confirmation' => 'signup#confirmation', as: :signup_confirmation
   post 'users/send_notifications' => 'users#send_notifications', as: :send_notifications
