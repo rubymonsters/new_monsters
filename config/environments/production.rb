@@ -76,4 +76,14 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+   address:              ENV['POSTMARK_SMTP_SERVER'],
+   port:                 '25',
+   domain:               'rubymonstas.heroku.com',
+   user_name:            ENV['POSTMARK_API_TOKEN'],
+   password:             ENV['POSTMARK_API_TOKEN'],
+   authentication:       :cram_md5, # or :plain for plain-text authentication
+   enable_starttls_auto: true  }
 end
