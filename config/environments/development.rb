@@ -40,11 +40,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
 
-
   # TEST MODE FOR ACTION MAILER, DELETE THIS LATER!!
-  ## DON'T FORGET TO DELETE IT!!!
+  ## DON'T FORGET TO DELETE THIS!!!
   config.action_mailer.delivery_method = :test
-
-
-  
 end

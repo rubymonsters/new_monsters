@@ -82,8 +82,8 @@ Rails.application.configure do
    address:              ENV['POSTMARK_SMTP_SERVER'],
    port:                 '25',
    domain:               'rubymonstas.heroku.com',
-   user_name:            ENV['POSTMARK_API_TOKEN'],
-   password:             ENV['POSTMARK_API_TOKEN'],
+   user_name:            ENV['POSTMARK_USER_NAME'],
+   password:             ENV['POSTMARK_PASSWORD'],
    authentication:       :cram_md5, # or :plain for plain-text authentication
    enable_starttls_auto: true  }
 end
