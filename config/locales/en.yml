@@ -28,10 +28,16 @@ en:
           attributes:
             name:
               blank: "You must give us your name!"
+
             email:
               blank: "You must give us your E-mail!"
               invalid: "The given E-mail address is invalid!"
+              taken: "The given E-mail address has already been taken!"
+
             twitter_handle:
               invalid: "The given Twitter handle is invalid!"
+              taken: "The given Twitter handle has already been taken!"
+
             location:
               blank: "You must give us your location!"
+              invalid: "Your location can only contain letters!"
