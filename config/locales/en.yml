@@ -41,3 +41,9 @@ en:
             location:
               blank: "You must give us your location!"
               invalid: "Your location can only contain letters!"
+
+            female:
+              blank:  
+
+            beginner:
+              blank:

@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
 	validates :twitter_handle, format: { allow_blank: true, with: /\A\w+\z/i, message: "%{value} is not a valid twitter handle!"}
 	# when present, check for uniqueness
 	validates :twitter_handle, uniqueness: true, if: 'twitter_handle.present?'
+
+	validates :female, presence: true
+
+	validates :beginner, presence: true
 end
