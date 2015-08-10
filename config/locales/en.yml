@@ -35,12 +35,11 @@ en:
               taken: "The given E-mail address has already been taken!"
 
             twitter_handle:
-              invalid: "The given Twitter handle is invalid!"
               taken: "The given Twitter handle has already been taken!"
 
             location:
               blank: "You must give us your location!"
-              invalid: "Your location can only contain letters!"
+              invalid: "Your location can only contain dashes (-), underscores (_), and letters!"
 
             female:
               inclusion: "We need to know if you identify as female!"
