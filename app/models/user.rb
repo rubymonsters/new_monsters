@@ -10,11 +10,12 @@ class User < ActiveRecord::Base
 	# ERROR: how can I make it ignore spaces? (with /x ?)
 	validates :location, format: { allow_blank: true, with: /\A[a-zA-Z]+\z/i }
 
+  # ERROR: -._123 should also be accepted!!!
 	validates :twitter_handle, format: { allow_blank: true, with: /\A\w+\z/i, message: "%{value} is not a valid twitter handle!"}
 	# when present, check for uniqueness
 	validates :twitter_handle, uniqueness: true, if: 'twitter_handle.present?'
 
-	validates :female, presence: true
+	validates :female, :inclusion => {:in => [true, false]}
 
-	validates :beginner, presence: true
+	validates :beginner, :inclusion => {:in => [true, false]}
 end

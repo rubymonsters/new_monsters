@@ -43,7 +43,7 @@ en:
               invalid: "Your location can only contain letters!"
 
             female:
-              blank:  
+              inclusion: "We need to know if you identify as female!"
 
             beginner:
-              blank:
+              inclusion: "We need to know if you're a beginner in Ruby!"
