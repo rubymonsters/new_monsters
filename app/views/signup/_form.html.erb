@@ -48,4 +48,15 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+<!-- Don't know why this wouldn't be in the same format as the submit above! -->
+  <div class="actions">
+    <%= link_to raw("<span>Start fresh!</span></span>"), ""%>
+  </div>
+
+<% end %>
+
+<!-- This doesn't work, but doesn't give an error either! -->
+<% form_for(@user, :url => signup_create_path, :remote => true, :html => {:method => :get, :class => "signup_path"}) do |f| %>
+  <%= f.submit "Save" %>
 <% end %>
