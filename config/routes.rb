@@ -2,8 +2,12 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :destroy]
   root to: 'signup#new', as: :signup
   post 'signup' => 'signup#create', as: :signup_create
+  get 'signup/male' => 'signup#male', as: :signup_male
+  get 'signup/nonbeginner' => 'signup#nonbeginner', as: :signup_nonbeginner
   get 'signup/confirmation' => 'signup#confirmation', as: :signup_confirmation
   post 'users/send_notifications' => 'users#send_notifications', as: :send_notifications
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

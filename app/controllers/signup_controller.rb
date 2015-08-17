@@ -22,6 +22,35 @@ class SignupController < ApplicationController
     render :confirmation
   end
 
+
+# NOT WORKING, but also giving no error!
+  # GET /signup/male
+  def male
+    @user = User.new(female: params[:female])
+
+    @user.female = false
+
+    if @user.save
+    # if @user.female = false
+      redirect_to signup_male_path
+    else
+      redirect_to signup_confirmation_path
+    end
+  end
+
+# NOT WORKING, but also giving no error!
+  # GET /signup/nonbeginner
+  def nonbeginner
+    @user = User.new(user: params[:beginner])
+
+    if @user.save false
+      redirect_to signup_nonbeginner_path
+    else
+      render :confirmation
+    end
+  end
+
+
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
